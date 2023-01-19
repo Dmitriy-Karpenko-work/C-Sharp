@@ -110,33 +110,32 @@ int[] myArray = new int [elementsCount];
 
 
 
-   //            массив на входе           всего                      
-int[] CraeteArray(int number,           int size) //агрументы 
+   //                         всего                      
+int[] CraeteArray(           int size) //агрументы 
 {
-    int[] array = new int[size]; //{number}; //запомнить!!!динамическое выделение помять под перемену INT [колво элементов в массиве]
+    int[] array = new int[size]; //{number}; //запомнить!!!динамическое выделение помять под перемену INT [колво элементов в массиве] ВОПРОС - 1
     for(int i=0; i < size; i++) // индекс первого элемента если индекс вышел больше массива выход из цикла если нет идем к следующиму индексу
-        array[i] = number; // присвоение индексу цыфры //ПРИСВАИВАЕТСЯ ПОСТОЯННО ОДНО ЧИСЛО
-                                     //for(int i=0; i < number; i++)
+        //Console.WriteLine("введите элементы "); почему не могу ввести ВОПРОС - 2
+        array[i] = Convert.ToInt32(Console.ReadLine()); //кастыль!!! нужно вводить сразу все значения и присваивать их в индекс ВОПРОС - 3
+                                     
     return array;
 }
 
 void showArray(int[] array) //метод возврата массива
 {
     for(int i=0;i<array.Length;i++)
-        Console.WriteLine("["+array[i] + " " + "]");
+        Console.Write("["+array[i] + " " + "]");
 
     Console.WriteLine();        
 }
 
 
-
-
-Console.WriteLine("Длинна массива");
+Console.WriteLine("Введите длину массива");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите элементы ");
-int elements = Convert.ToInt32(Console.ReadLine());
+                                                        //Console.WriteLine("введите элементы ");
+                                                        //int elements = Convert.ToInt32(Console.ReadLine());
 
-int[] newArray = CraeteArray(elements,size);
+int[] newArray = CraeteArray(size);
 showArray(newArray);
 
 
