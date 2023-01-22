@@ -111,12 +111,14 @@ int[] myArray = new int [elementsCount];
 
 
    //                         всего                      
-int[] CraeteArray(           int size) //агрументы 
+int[] CraeteArray(int size) //агрументы 
 {
     int[] array = new int[size]; //{number}; //запомнить!!!динамическое выделение помять под перемену INT [колво элементов в массиве] ВОПРОС - 1
     for(int i=0; i < size; i++) // индекс первого элемента если индекс вышел больше массива выход из цикла если нет идем к следующиму индексу
-        //Console.WriteLine("введите элементы "); почему не могу ввести ВОПРОС - 2
-        array[i] = Convert.ToInt32(Console.ReadLine()); //кастыль!!! нужно вводить сразу все значения и присваивать их в индекс ВОПРОС - 3
+        {
+            Console.WriteLine("введите элемент ");
+            array[i] = Convert.ToInt32(Console.ReadLine());//кастыль!!! нужно вводить сразу все значения и присваивать их в индекс ВОПРОС - 3
+        }
                                      
     return array;
 }
@@ -124,7 +126,7 @@ int[] CraeteArray(           int size) //агрументы
 void showArray(int[] array) //метод возврата массива
 {
     for(int i=0;i<array.Length;i++)
-        Console.Write("["+array[i] + " " + "]");
+        Console.Write("["+array[i] + "" + "]");
 
     Console.WriteLine();        
 }
